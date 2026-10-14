@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- Texto escondido de fundo (quase invisível) -->
   <div class="bg-text" aria-hidden="true" id="bgText"></div>
 
   <button class="sound-toggle" id="soundToggle" title="Alternar som">♪</button>
@@ -32,8 +31,17 @@
     <span>Acesso Concedido</span>
   </div>
 
-  <!-- 🎵 Substitua "musica.mp3" pelo nome do seu arquivo -->
-  <audio id="bgMusic" src="musica.mp3" loop preload="auto"></audio>
+  <!-- 
+    🎵 ÁUDIO DE FUNDO
+    Troque o "src" abaixo pelo nome EXATO do seu arquivo.
+    Use <source> múltiplos para o navegador escolher o melhor formato.
+  -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="musica.mp3" type="audio/mpeg">
+    <source src="musica.ogg" type="audio/ogg">
+    <source src="musica.m4a" type="audio/mp4">
+    <source src="musica.wav" type="audio/wav">
+  </audio>
 
   <script src="audio.js"></script>
   <script src="script.js"></script>
